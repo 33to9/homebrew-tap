@@ -2,8 +2,8 @@
 #   brew install --cask 33to9/tap/tinyrecorder
 # CI (.github/workflows/build.yml, job "homebrew") rewrites version + sha256 on every tag release.
 cask "tinyrecorder" do
-  version "1.8.7"
-  sha256 "cd2ccd66cbe835afc975819ca9c9ea739f1fd2d8f223199f4fbd775e799afcd0"
+  version "1.8.8"
+  sha256 "2f9e88e72c9221d00e9c227328e325a77321d22427b8f9a54824b8b5cd0c3fd5"
 
   url "https://github.com/33to9/TinyRecorder/releases/download/v#{version}/TinyRecorder_v#{version}.dmg"
   name "TinyRecorder"
