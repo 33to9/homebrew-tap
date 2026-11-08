@@ -2,8 +2,8 @@
 #   brew install --cask 33to9/tap/tinyrecorder
 # CI (.github/workflows/build.yml, job "homebrew") rewrites version + sha256 on every tag release.
 cask "tinyrecorder" do
-  version "1.8.19"
-  sha256 "8a11a9af1e6b0de6558d49b46417435a7c064cc152e21d562092fe9ab4a2a33b"
+  version "1.8.20"
+  sha256 "60be5c9fc448b5b2284c9636f13287b053e18eaf2028b30c2d7985d2269a6594"
 
   url "https://github.com/33to9/TinyRecorder/releases/download/v#{version}/TinyRecorder_v#{version}.dmg"
   name "TinyRecorder"
@@ -20,6 +20,8 @@ cask "tinyrecorder" do
   depends_on macos: :monterey
 
   app "TinyRecorder.app"
+  # Command-line control (tinyrecorder help), also for AI agents
+  binary "#{appdir}/TinyRecorder.app/Contents/Resources/tinyrecorder"
 
   # The app is self-signed, not notarized by Apple: without this, Gatekeeper
   # blocks the first launch of the quarantined copy Homebrew downloaded.
